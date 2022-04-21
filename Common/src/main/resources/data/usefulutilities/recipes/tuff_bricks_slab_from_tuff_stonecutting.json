@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "usefulutilities:tuff"
+  },
+  "result": "usefulutilities:tuff_bricks",
+  "count": 1
+}

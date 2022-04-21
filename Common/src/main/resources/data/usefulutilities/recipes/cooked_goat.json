@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "usefulutilities:raw_goat"
+  },
+  "result": "usefulutilities:cooked_goat",
+  "experience": 0.35,
+  "cookingtime": 200
+}

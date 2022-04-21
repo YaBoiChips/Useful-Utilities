@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:tuff",
+    "usefulutilities:polished_tuff",
+    "usefulutilities:tuff_bricks"
+  ]
+}

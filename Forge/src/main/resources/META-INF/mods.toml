@@ -3,23 +3,23 @@ loaderVersion="[38,)"
 license="CC0"
 issueTrackerURL="https://github.com/CorgiTaco/MultiLoader-Template/issues" #optional
 [[mods]]
-modId="modid"
+modId="usefulutilities"
 version="${file.jarVersion}"
-displayName="Example Mod"
-displayURL="https://github.com/CorgiTaco/MultiLoader-Template/"
+displayName="Useful Utilities"
+displayURL="https://github.com/YaBoiChips/Useful-Utilities/"
 logoFile="multiloader.png"
 credits=""
-authors="Corgi Taco"
+authors="YaBoiChips, AOCAWOL, DorkUp55"
 description='''
 '''
-[[dependencies.modid]]
+[[dependencies.usefulutilities]]
     modId="forge" #mandatory
     mandatory=true #mandatory
     versionRange="[38,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.modid]]
+[[dependencies.usefulutilities]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18,1.19)"

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "usefulutilities:block/amethyst_lantern"
+    },
+    "hanging=true": {
+      "model": "usefulutilities:block/amethyst_lantern_hanging"
+    }
+  }
+}

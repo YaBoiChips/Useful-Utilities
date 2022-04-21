@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "usefulutilities:tuff_bricks"
+    }
+  },
+  "result": {
+    "item": "usefulutilities:tuff_brick_wall",
+    "count": 6
+  }
+}

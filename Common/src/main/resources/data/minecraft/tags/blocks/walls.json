@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "usefulutilities:tuff_wall",
+    "usefulutilities:polished_tuff_wall",
+    "usefulutilities:tuff_brick_wall",
+    "usefulutilities:calcite_wall",
+    "usefulutilities:polished_calcite_wall",
+    "usefulutilities:calcite_brick_wall"
+  ]
+}
