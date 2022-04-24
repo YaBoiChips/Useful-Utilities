@@ -11,8 +11,14 @@
     "access.MenuTypeAccess",
     "access.RecipeManagerAccess",
     "access.StairBlockAccess",
+    "client.ItemBlockRenderTypeAccess",
     "client.MixinScreenManager",
-    "common.BoatMixin"
+    "common.BoatMixin",
+    "common.MixinBottleItem",
+    "common.MixinEntityRenderers",
+    "common.MixinLayerDefinitions",
+    "common.MixinThrownPotion",
+    "common.MixinZombie"
   ],
   "client": [
   ],
