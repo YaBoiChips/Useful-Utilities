@@ -7,9 +7,7 @@ import yaboichips.usefulutilities.common.blocks.mason.MasonOven;
 import yaboichips.usefulutilities.mixin.access.EndRodAccess;
 import yaboichips.usefulutilities.mixin.access.StairBlockAccess;
 import yaboichips.usefulutilities.util.Register;
-import yaboichips.usefulutilities.util.RegistryObject;
 
-import java.util.Collection;
 
 public class UUBlocks {
 

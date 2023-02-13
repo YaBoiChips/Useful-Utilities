@@ -9,7 +9,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import yaboichips.usefulutilities.client.renderers.TurtleBoatRenderer;
 import yaboichips.usefulutilities.core.UUEntities;
 
 @Mixin(EntityRenderers.class)
@@ -20,8 +19,4 @@ public abstract class MixinEntityRenderers {
         throw new Error("Mixin did not apply!");
     }
 
-    @Inject(method = "<clinit>", at = @At("RETURN"))
-    private static void registerUVRenderers(CallbackInfo ci) {
-        register(UUEntities.TURTLE_BOAT, TurtleBoatRenderer::new);
-    }
 }

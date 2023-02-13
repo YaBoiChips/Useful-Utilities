@@ -17,7 +17,6 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.NotNull;
 import yaboichips.usefulutilities.core.UUTileEntities;
 
 public class CopperHopper extends HopperBlock {
@@ -36,7 +35,7 @@ public class CopperHopper extends HopperBlock {
     }
 
     @Override
-    public @NotNull RenderShape getRenderShape(BlockState state) {
+    public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
     }
 

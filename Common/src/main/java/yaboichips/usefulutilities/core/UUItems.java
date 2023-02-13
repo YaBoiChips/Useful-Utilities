@@ -4,13 +4,10 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
-import yaboichips.usefulutilities.common.entities.TurtleBoat;
 import yaboichips.usefulutilities.common.items.ThrowableDragonsBreath;
 import yaboichips.usefulutilities.common.items.TravelersBoots;
-import yaboichips.usefulutilities.common.items.TurtleBoatItem;
 import yaboichips.usefulutilities.util.Register;
 
-import static yaboichips.usefulutilities.common.entities.TurtleBoat.ModType.*;
 import static yaboichips.usefulutilities.core.UUTab.TAB;
 
 
@@ -64,12 +61,6 @@ public class UUItems {
     public static final Item AMETHYST_LANTERN = createBlockItem(UUBlocks.AMETHYST_LANTERN);
     public static final Item AMETHYST_END_ROD = createBlockItem(UUBlocks.AMETHYST_END_ROD);
     public static final Item COPPER_CHAIN = createBlockItem(UUBlocks.COPPER_CHAIN);
-    public static final Item OAK_TURTLE_BOAT = createBoatItem(OAK_TURTLE);
-    public static final Item BIRCH_TURTLE_BOAT = createBoatItem(BIRCH_TURTLE);
-    public static final Item DARK_OAK_TURTLE_BOAT = createBoatItem(DARK_OAK_TURTLE);
-    public static final Item ACACIA_TURTLE_BOAT = createBoatItem(ACACIA_TURTLE);
-    public static final Item SPRUCE_TURTLE_BOAT = createBoatItem(SPRUCE_TURTLE);
-    public static final Item JUNGLE_TURTLE_BOAT = createBoatItem(JUNGLE_TURTLE);
     public static final Item TRAVELERS_BOOTS = new TravelersBoots(UUArmors.TRAVELERS, EquipmentSlot.FEET, new Item.Properties().tab(TAB));
 
     public static BlockItem createBlockItem(Block block) {
@@ -116,12 +107,6 @@ public class UUItems {
         item.register("fox_fur", FOX_FUR);
         item.register("llama_spit", LLAMA_SPIT);
         item.register("throwable_dragons_breath", THROWABLE_DRAGONS_BREATH);
-        item.register("oak_turtle_boat", OAK_TURTLE_BOAT);
-        item.register("birch_turtle_boat", BIRCH_TURTLE_BOAT);
-        item.register("dark_oak_turtle_boat", DARK_OAK_TURTLE_BOAT);
-        item.register("acacia_turtle_boat", ACACIA_TURTLE_BOAT);
-        item.register("spruce_turtle_boat", SPRUCE_TURTLE_BOAT);
-        item.register("jungle_turtle_boat", JUNGLE_TURTLE_BOAT);
         item.register("travelers_boots", TRAVELERS_BOOTS);
 
     }
@@ -130,9 +115,6 @@ public class UUItems {
         return new Item(new Item.Properties().tab(TAB));
     }
 
-    public static Item createBoatItem(TurtleBoat.ModType type) {
-        return new TurtleBoatItem(type, new Item.Properties().stacksTo(1));
-    }
 
     public static Item createArmorItem(ArmorMaterial material, EquipmentSlot slot) {
         return new ArmorItem(material, slot, new Item.Properties().tab(TAB));

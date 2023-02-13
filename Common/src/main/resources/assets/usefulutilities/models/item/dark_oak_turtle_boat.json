@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "usefulutilities:item/dark_oak_turtle_boat"
+    "layer0": "minecraft:item/oak_boat"
   }
 }

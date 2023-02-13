@@ -21,6 +21,11 @@ minecraft {
     mappings channel: 'official', version: minecraft_version
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
+    if (project.hasProperty('forge_ats_enabled') && project.findProperty('forge_ats_enabled').toBoolean()) {
+        // This location is hardcoded in Forge and can not be changed.
+        // https://github.com/MinecraftForge/MinecraftForge/blob/be1698bb1554f9c8fa2f58e32b9ab70bc4385e60/fmlloader/src/main/java/net/minecraftforge/fml/loading/moddiscovery/ModFile.java#L123
+        project.logger.debug('Forge Access Transformers are enabled for this project.')
+    }
 
     runs {
         client {
@@ -41,6 +46,8 @@ minecraft {
             arg "-mixin.config=${mod_id}.mixins.json"
             ideaModule "${rootProject.name}.${project.name}.main"
             taskName 'Server'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             mods {
                 modServerRun {
                     source sourceSets.main
@@ -55,6 +62,9 @@ minecraft {
             args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), "-mixin.config=${mod_id}.mixins.json", "-mixin.config=${mod_id}_forge.mixins.json"
 
             taskName 'Data'
+
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             mods {
                 modDataRun {
                     source sourceSets.main
@@ -83,10 +93,10 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly project(":Common")
-    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}:9.5.0.132:api") // Adds JEI API as a compile dependency
-    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}:9.5.0.132")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
+
+
 
 mixin {
     add project(":Common").sourceSets.main, "${mod_id}.refmap.json"
@@ -127,6 +137,9 @@ jar.finalizedBy('reobfJar')
 publishing {
     publications {
         mavenJava(MavenPublication) {
+            groupId project.group
+            artifactId project.archivesBaseName
+            version project.version
             artifact jar
         }
     }
