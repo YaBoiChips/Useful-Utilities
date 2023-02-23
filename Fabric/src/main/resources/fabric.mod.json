@@ -18,13 +18,13 @@
     "environment": "*",
     "entrypoints": {
       "main": [
-        "yaboichips.usefulutilities.UsefulUtilitiesFabric"
+        "yaboichips.soap.SoapFabric"
       ]
     },
-  "accessWidener": "usefulutilities.aw",
+  "accessWidener": "soap.aw",
     "mixins": [
-      "usefulutilities_fabric.mixins.json",
-      "usefulutilities.mixins.json"
+      "soap_fabric.mixins.json",
+      "soap.mixins.json"
     ],
   
     "depends": {

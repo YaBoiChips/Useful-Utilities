@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "soap:tuff"
+  },
+  "result": "soap:tuff_brick_wall",
+  "count": 1
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:tuff",
+    "soap:polished_tuff",
+    "soap:tuff_bricks"
+  ]
+}

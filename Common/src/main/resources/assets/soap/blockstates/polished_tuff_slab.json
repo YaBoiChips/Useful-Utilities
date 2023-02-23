@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "soap:block/polished_tuff_slab"
+    },
+    "type=double": {
+      "model": "soap:block/polished_tuff"
+    },
+    "type=top": {
+      "model": "soap:block/polished_tuff_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "soap:calcite"
+  },
+  "result": "soap:calcite_brick_stairs",
+  "count": 1
+}

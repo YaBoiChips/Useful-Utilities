@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "soap:raw_goat"
+  },
+  "result": "soap:cooked_goat",
+  "experience": 0.35,
+  "cookingtime": 100
+}

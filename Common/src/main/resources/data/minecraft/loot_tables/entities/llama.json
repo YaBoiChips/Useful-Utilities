@@ -60,7 +60,7 @@
               }
             }
           ],
-          "name": "usefulutilities:raw_llama"
+          "name": "soap:raw_llama"
         }
       ]
     }

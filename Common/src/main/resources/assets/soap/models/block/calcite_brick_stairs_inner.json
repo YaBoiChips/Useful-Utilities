@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "soap:block/calcite_bricks",
+    "top": "soap:block/calcite_bricks",
+    "side": "soap:block/calcite_bricks"
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "usefulutilities:raw_llama"
-  },
-  "result": "usefulutilities:charki",
-  "experience": 0.35,
-  "cookingtime": 200
-}

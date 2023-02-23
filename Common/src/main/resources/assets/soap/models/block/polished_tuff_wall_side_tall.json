@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side_tall",
+  "textures": {
+    "wall": "soap:block/polished_tuff",
+    "particle": "soap:block/polished_tuff"
+  }
+}

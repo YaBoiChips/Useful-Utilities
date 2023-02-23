@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "soap:block/calcite_brick_slab"
+    },
+    "type=double": {
+      "model": "soap:block/calcite_bricks"
+    },
+    "type=top": {
+      "model": "soap:block/calcite_brick_slab_top"
+    }
+  }
+}

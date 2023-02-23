@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:calcite",
+    "soap:polished_calcite",
+    "soap:calcite_bricks"
+  ]
+}

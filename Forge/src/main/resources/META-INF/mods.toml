@@ -3,23 +3,23 @@ loaderVersion="[43,)"
 license="CC0"
 issueTrackerURL="https://github.com/CorgiTaco/MultiLoader-Template/issues" #optional
 [[mods]]
-modId="usefulutilities"
+modId="soap"
 version="${file.jarVersion}"
-displayName="Useful Utilities"
-displayURL="https://github.com/YaBoiChips/Useful-Utilities/"
+displayName="Soap"
+displayURL="https://github.com/YaBoiChips/Soap/"
 logoFile="multiloader.png"
 credits=""
 authors="YaBoiChips, AOCAWOL, DorkUp55"
 description='''
 '''
-[[dependencies.usefulutilities]]
+[[dependencies.soap]]
     modId="forge" #mandatory
     mandatory=true #mandatory
     versionRange="[43,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.usefulutilities]]
+[[dependencies.soap]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.19.2,1.20)"

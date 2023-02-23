@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "soap:block/tuff_brick_slab"
+    },
+    "type=double": {
+      "model": "soap:block/tuff_bricks"
+    },
+    "type=top": {
+      "model": "soap:block/tuff_brick_slab_top"
+    }
+  }
+}

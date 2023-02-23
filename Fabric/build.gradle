@@ -16,7 +16,7 @@ dependencies {
 }
 
 loom {
-    accessWidenerPath = project(":Common").file("src/main/resources/usefulutilities.aw")
+    accessWidenerPath = project(":Common").file("src/main/resources/soap.aw")
     runs {
         client {
             client()

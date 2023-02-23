@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "soap:block/polished_tuff",
+    "top": "soap:block/polished_tuff",
+    "side": "soap:block/polished_tuff"
+  }
+}

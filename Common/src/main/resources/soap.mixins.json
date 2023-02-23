@@ -1,0 +1,28 @@
+{
+  "required": true,
+  "package": "yaboichips.soap.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "${refmap_target}refmap.json",
+  "mixins": [
+    "access.BlockEntityTypeAccess",
+    "access.BlockEntityTypeBuilderAccess",
+    "access.EndRodAccess",
+    "access.MenuTypeAccess",
+    "access.RecipeManagerAccess",
+    "access.StairBlockAccess",
+    "client.ItemBlockRenderTypeAccess",
+    "client.MixinScreenManager",
+    "common.MixinBottleItem",
+    "common.MixinEntityRenderers",
+    "common.MixinLlama",
+    "common.MixinPlayer",
+    "common.MixinThrownPotion",
+    "common.MixinZombie"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

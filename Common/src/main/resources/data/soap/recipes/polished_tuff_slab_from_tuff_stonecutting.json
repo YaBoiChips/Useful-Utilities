@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "soap:tuff"
+  },
+  "result": "soap:polished_tuff_slab",
+  "count": 2
+}

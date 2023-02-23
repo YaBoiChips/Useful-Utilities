@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "top": "usefulutilities:block/mason_oven_top_lit",
-    "front": "usefulutilities:block/mason_oven_front_lit",
-    "side": "usefulutilities:block/mason_oven_side"
-  }
-}

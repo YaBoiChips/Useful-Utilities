@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "soap:polished_calcite"
+        }
+    },
+    "result": {
+        "item": "soap:polished_calcite_slab",
+        "count": 6
+    }
+}

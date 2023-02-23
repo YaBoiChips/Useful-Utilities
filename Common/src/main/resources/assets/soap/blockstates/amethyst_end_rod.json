@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "soap:block/amethyst_end_rod",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "soap:block/amethyst_end_rod",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "soap:block/amethyst_end_rod",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "soap:block/amethyst_end_rod",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "soap:block/amethyst_end_rod"
+    },
+    "facing=west": {
+      "model": "soap:block/amethyst_end_rod",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
