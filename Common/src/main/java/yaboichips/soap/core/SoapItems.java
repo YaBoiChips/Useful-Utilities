@@ -15,6 +15,7 @@ public class SoapItems {
 
     public static final Item COPPER_HOPPER = createBlockItem(SoapBlocks.COPPER_HOPPER);
     public static final Item MASON_OVEN = createBlockItem(SoapBlocks.MASON_OVEN);
+    public static final Item LARGE_FURNACE = createBlockItem(SoapBlocks.LARGE_FURNACE);
 
     public static final Item TUFF_SLAB = createBlockItem(SoapBlocks.TUFF_SLAB);
     public static final Item TUFF_STAIRS = createBlockItem(SoapBlocks.TUFF_STAIRS);
@@ -73,6 +74,7 @@ public class SoapItems {
         item.register("amethyst_end_rod", AMETHYST_END_ROD);
         item.register("copper_chain", COPPER_CHAIN);
         item.register("mason_oven", MASON_OVEN);
+        item.register("large_furnace", LARGE_FURNACE);
         item.register("tuff_slab", TUFF_SLAB);
         item.register("tuff_stairs", TUFF_STAIRS);
         item.register("tuff_wall", TUFF_WALL);

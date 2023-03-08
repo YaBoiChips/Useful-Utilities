@@ -21,7 +21,7 @@ public class MasonOvenTE extends AbstractFurnaceBlockEntity {
         return Component.translatable("container.mason_oven");
     }
 
-    protected int getBurnDuration(final ItemStack stack) {
+    public int getBurnDuration(final ItemStack stack) {
         return super.getBurnDuration(stack) / 2;
     }
 

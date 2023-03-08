@@ -1,9 +1,9 @@
 {
     "schemaVersion": 1,
-    "id": "usefulutilities",
+    "id": "soap",
     "version": "1.0.1",
   
-    "name": "Useful Utilities",
+    "name": "Soap",
     "description": "",
     "authors": [
       "YaBoiChips"

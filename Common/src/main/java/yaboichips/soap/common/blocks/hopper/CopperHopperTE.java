@@ -65,12 +65,12 @@ public class CopperHopperTE extends RandomizableContainerBlockEntity implements 
     }
 
     public ItemStack removeItem(int $$0, int $$1) {
-        this.unpackLootTable((Player)null);
+        this.unpackLootTable(null);
         return ContainerHelper.removeItem(this.getItems(), $$0, $$1);
     }
 
     public void setItem(int $$0, ItemStack $$1) {
-        this.unpackLootTable((Player)null);
+        this.unpackLootTable(null);
         this.getItems().set($$0, $$1);
         if ($$1.getCount() > this.getMaxStackSize()) {
             $$1.setCount(this.getMaxStackSize());
@@ -166,7 +166,7 @@ public class CopperHopperTE extends RandomizableContainerBlockEntity implements 
         Container $$2 = getSourceContainer($$0, $$1);
         if ($$2 != null) {
             Direction $$3 = Direction.DOWN;
-            return isEmptyContainer($$2, $$3) ? false : getSlots($$2, $$3).anyMatch(($$3x) -> tryTakeInItemFromSlot($$1, $$2, $$3x, $$3));
+            return !isEmptyContainer($$2, $$3) && getSlots($$2, $$3).anyMatch(($$3x) -> tryTakeInItemFromSlot($$1, $$2, $$3x, $$3));
         } else {
             for(ItemEntity $$4 : getItemsAtAndAbove($$0, $$1)) {
                 if (addItem($$1, $$4)) {
@@ -182,7 +182,7 @@ public class CopperHopperTE extends RandomizableContainerBlockEntity implements 
         ItemStack $$4 = $$1.getItem($$2);
         if (!$$4.isEmpty() && canTakeItemFromContainer($$1, $$4, $$2, $$3)) {
             ItemStack $$5 = $$4.copy();
-            ItemStack $$6 = addItem($$1, $$0, $$1.removeItem($$2, 1), (Direction)null);
+            ItemStack $$6 = addItem($$1, $$0, $$1.removeItem($$2, 1), null);
             if ($$6.isEmpty()) {
                 $$1.setChanged();
                 return true;
@@ -197,7 +197,7 @@ public class CopperHopperTE extends RandomizableContainerBlockEntity implements 
     public static boolean addItem(Container $$0, ItemEntity $$1) {
         boolean $$2 = false;
         ItemStack $$3 = $$1.getItem().copy();
-        ItemStack $$4 = addItem((Container)null, $$0, $$3, (Direction)null);
+        ItemStack $$4 = addItem(null, $$0, $$3, null);
         if ($$4.isEmpty()) {
             $$2 = true;
             $$1.discard();
@@ -372,7 +372,7 @@ public class CopperHopperTE extends RandomizableContainerBlockEntity implements 
     }
 
     public static void entityInside(Level $$0, BlockPos $$1, BlockState $$2, Entity $$3, CopperHopperTE $$4) {
-        if ($$3 instanceof ItemEntity && Shapes.joinIsNotEmpty(Shapes.create($$3.getBoundingBox().move((double)(-$$1.getX()), (double)(-$$1.getY()), (double)(-$$1.getZ()))), $$4.getSuckShape(), BooleanOp.AND)) {
+        if ($$3 instanceof ItemEntity && Shapes.joinIsNotEmpty(Shapes.create($$3.getBoundingBox().move(-$$1.getX(), -$$1.getY(), -$$1.getZ())), $$4.getSuckShape(), BooleanOp.AND)) {
             tryMoveItems($$0, $$1, $$2, $$4, () -> addItem($$4, (ItemEntity)$$3));
         }
 

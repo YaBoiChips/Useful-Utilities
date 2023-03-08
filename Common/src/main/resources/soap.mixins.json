@@ -2,7 +2,7 @@
   "required": true,
   "package": "yaboichips.soap.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "${refmap_target}refmap.json",
+  "refmap": "soap.refmap.json",
   "mixins": [
     "access.BlockEntityTypeAccess",
     "access.BlockEntityTypeBuilderAccess",

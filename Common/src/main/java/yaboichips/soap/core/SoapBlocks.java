@@ -3,6 +3,7 @@ package yaboichips.soap.core;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import yaboichips.soap.common.blocks.hopper.CopperHopper;
+import yaboichips.soap.common.blocks.large_furnace.LargeFurnaceBlock;
 import yaboichips.soap.common.blocks.mason.MasonOven;
 import yaboichips.soap.mixin.access.EndRodAccess;
 import yaboichips.soap.mixin.access.StairBlockAccess;
@@ -13,6 +14,7 @@ public class SoapBlocks {
 
     public static final Block COPPER_HOPPER = new CopperHopper(BlockBehaviour.Properties.copy(Blocks.HOPPER).noOcclusion());
     public static final Block MASON_OVEN = new MasonOven(BlockBehaviour.Properties.copy(Blocks.BLAST_FURNACE));
+    public static final Block LARGE_FURNACE = new LargeFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.BLAST_FURNACE));
 
     public static final Block COPPER_CHAIN = new ChainBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN));
     public static final Block AMETHYST_LANTERN = new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN).noOcclusion());
@@ -48,6 +50,7 @@ public class SoapBlocks {
         blocks.register("amethyst_end_rod", AMETHYST_END_ROD);
         blocks.register("copper_chain", COPPER_CHAIN);
         blocks.register("mason_oven", MASON_OVEN);
+        blocks.register("large_furnace", LARGE_FURNACE);
         blocks.register("tuff_slab", TUFF_SLAB);
         blocks.register("tuff_stairs", TUFF_STAIRS);
         blocks.register("tuff_wall", TUFF_WALL);

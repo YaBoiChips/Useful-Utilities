@@ -25,8 +25,8 @@ public class SoapForge {
             }
         });
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        eventBus.addListener(this::doClientThings);
         bootStrap(eventBus);
+        eventBus.addListener(this::doClientThings);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

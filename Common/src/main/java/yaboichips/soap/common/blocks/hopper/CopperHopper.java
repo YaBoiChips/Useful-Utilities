@@ -2,6 +2,8 @@ package yaboichips.soap.common.blocks.hopper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.Containers;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -15,6 +17,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import yaboichips.soap.core.SoapTileEntities;
@@ -61,7 +64,22 @@ public class CopperHopper extends HopperBlock {
         if (blockentity instanceof CopperHopperTE te) {
             CopperHopperTE.entityInside(p_54067_, p_54068_, p_54066_, p_54069_, te);
         }
+    }
 
+    @Override
+    public void onRemove(BlockState $$0, Level $$1, BlockPos $$2, BlockState $$3, boolean $$4) {
+        if (!$$0.is($$3.getBlock())) {
+            BlockEntity $$5 = $$1.getBlockEntity($$2);
+            if ($$5 instanceof CopperHopperTE) {
+                if ($$1 instanceof ServerLevel) {
+                    Containers.dropContents($$1, $$2, (CopperHopperTE)$$5);
+                }
+
+                $$1.updateNeighbourForOutputSignal($$2, this);
+            }
+
+            super.onRemove($$0, $$1, $$2, $$3, $$4);
+        }
     }
 
     @Override
