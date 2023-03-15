@@ -2,9 +2,11 @@ package yaboichips.soap;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
+import yaboichips.soap.common.entities.Gremlin;
 import yaboichips.soap.core.*;
 
 import static yaboichips.soap.Soap.createLocation;
@@ -22,5 +24,10 @@ public class SoapFabric implements ModInitializer {
         SoapRecipeSerializers.register((name, recipeSerializer) -> Registry.register(Registry.RECIPE_SERIALIZER, createLocation(name), recipeSerializer));
         SoapTileEntities.register((name, te) -> Registry.register(Registry.BLOCK_ENTITY_TYPE, createLocation(name), te));
         Soap.init();
+
+    }
+
+    public static void registerEntityAttributes() {
+        FabricDefaultAttributeRegistry.register(SoapEntities.GREMLIN, Gremlin.createAttributes());
     }
 }

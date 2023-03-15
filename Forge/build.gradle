@@ -3,6 +3,8 @@ buildscript {
         maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
         maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+        maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
@@ -88,12 +90,14 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'}
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly project(":Common")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.19:3.1.27")
 }
 
 

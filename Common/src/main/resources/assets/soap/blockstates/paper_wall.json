@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "soap:block/paper_wall"
+    }
+  }
+}

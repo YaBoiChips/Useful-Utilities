@@ -4,8 +4,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
-import yaboichips.soap.common.items.ThrowableDragonsBreath;
-import yaboichips.soap.common.items.TravelersBoots;
+import yaboichips.soap.common.items.*;
 import yaboichips.soap.util.Register;
 
 import static yaboichips.soap.core.SoapTab.TAB;
@@ -13,9 +12,34 @@ import static yaboichips.soap.core.SoapTab.TAB;
 
 public class SoapItems {
 
+    public static final Item PAPER_WALL = createBlockItem(SoapBlocks.PAPER_WALL);
+    public static final Item ACACIA_PANEL = createBlockItem(SoapBlocks.ACACIA_PANEL);
+    public static final Item OAK_PANEL = createBlockItem(SoapBlocks.OAK_PANEL);
+    public static final Item DARK_OAK_PANEL = createBlockItem(SoapBlocks.DARK_OAK_PANEL);
+    public static final Item SPRUCE_PANEL = createBlockItem(SoapBlocks.SPRUCE_PANEL);
+    public static final Item BIRCH_PANEL = createBlockItem(SoapBlocks.BIRCH_PANEL);
+    public static final Item MANGROVE_PANEL = createBlockItem(SoapBlocks.MANGROVE_PANEL);
+    public static final Item JUNGLE_PANEL = createBlockItem(SoapBlocks.JUNGLE_PANEL);
+    public static final Item WARPED_PANEL = createBlockItem(SoapBlocks.WARPED_PANEL);
+    public static final Item CRIMSON_PANEL = createBlockItem(SoapBlocks.CRIMSON_PANEL);
+    public static final Item CALCITE_PANEL = createBlockItem(SoapBlocks.CALCITE_PANEL);
+    public static final Item PRISMARINE_PANEL = createBlockItem(SoapBlocks.PRISMARINE_PANEL);
+    public static final Item PURPUR_PANEL = createBlockItem(SoapBlocks.PURPUR_PANEL);
+    public static final Item STONE_PANEL = createBlockItem(SoapBlocks.STONE_PANEL);
+    public static final Item DEEPSLATE_PANEL = createBlockItem(SoapBlocks.DEEPSLATE_PANEL);
+
+
     public static final Item COPPER_HOPPER = createBlockItem(SoapBlocks.COPPER_HOPPER);
     public static final Item MASON_OVEN = createBlockItem(SoapBlocks.MASON_OVEN);
     public static final Item LARGE_FURNACE = createBlockItem(SoapBlocks.LARGE_FURNACE);
+
+    public static final Item PALADINS_GEM = new PaladinsGem(new Item.Properties().tab(TAB));
+
+    public static final Item FIRE_SWORD = new FireSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB));
+    public static final Item WATER_SWORD = new WaterSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB));
+    public static final Item AIR_SWORD = new AirSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB));
+    public static final Item LIGHTNING_SWORD = new LightningSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB));
+
 
     public static final Item TUFF_SLAB = createBlockItem(SoapBlocks.TUFF_SLAB);
     public static final Item TUFF_STAIRS = createBlockItem(SoapBlocks.TUFF_STAIRS);
@@ -110,6 +134,26 @@ public class SoapItems {
         item.register("llama_spit", LLAMA_SPIT);
         item.register("throwable_dragons_breath", THROWABLE_DRAGONS_BREATH);
         item.register("travelers_boots", TRAVELERS_BOOTS);
+        item.register("paper_wall", PAPER_WALL);
+        item.register("acacia_panel", ACACIA_PANEL);
+        item.register("oak_panel", OAK_PANEL);
+        item.register("dark_oak_panel", DARK_OAK_PANEL);
+        item.register("spruce_panel", SPRUCE_PANEL);
+        item.register("birch_panel", BIRCH_PANEL);
+        item.register("jungle_panel", JUNGLE_PANEL);
+        item.register("mangrove_panel", MANGROVE_PANEL);
+        item.register("warped_panel", WARPED_PANEL);
+        item.register("crimson_panel", CRIMSON_PANEL);
+        item.register("calcite_panel", CALCITE_PANEL);
+        item.register("prismarine_panel", PRISMARINE_PANEL);
+        item.register("purpur_panel", PURPUR_PANEL);
+        item.register("stone_panel", STONE_PANEL);
+        item.register("deepslate_panel", DEEPSLATE_PANEL);
+        item.register("paladins_gem", PALADINS_GEM);
+        item.register("fire_sword", FIRE_SWORD);
+        item.register("air_sword", AIR_SWORD);
+        item.register("water_sword", WATER_SWORD);
+        item.register("lightning_sword", LIGHTNING_SWORD);
 
     }
 
@@ -125,5 +169,4 @@ public class SoapItems {
     public static Item createFoodItem(FoodProperties food) {
         return new Item(new Item.Properties().tab(TAB).food(food));
     }
-
 }

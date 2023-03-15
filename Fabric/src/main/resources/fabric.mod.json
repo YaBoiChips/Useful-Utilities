@@ -19,6 +19,9 @@
     "entrypoints": {
       "main": [
         "yaboichips.soap.SoapFabric"
+      ],
+      "client": [
+        "yaboichips.soap.SoapFabricClient"
       ]
     },
   "accessWidener": "soap.aw",

@@ -3,14 +3,19 @@ package yaboichips.soap;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
+import yaboichips.soap.client.renderers.SoapRenderers;
 import yaboichips.soap.client.renderers.UVCutoutRenders;
+import yaboichips.soap.common.entities.DragonsBreathEntity;
+import yaboichips.soap.common.entities.Gremlin;
 import yaboichips.soap.core.*;
 
 @Mod(Soap.MOD_ID)
@@ -42,6 +47,16 @@ public class SoapForge {
         eventBus.addListener(this::registerRecipeType);
         eventBus.addListener(this::registerRecipes);
         eventBus.addListener(this::registerBlockEntities);
+        eventBus.addListener(this::createEntityAttributes);
+        eventBus.addListener(this::registerEntityRenderers);
+    }
+
+    public void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event){
+        SoapRenderers.register(event::registerEntityRenderer);
+    }
+
+    public void createEntityAttributes(final EntityAttributeCreationEvent event) {
+        event.put(SoapEntities.GREMLIN, Gremlin.createAttributes().build());
     }
 
     public void registerBlocks(RegisterEvent event) {

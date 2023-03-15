@@ -3,10 +3,8 @@ package yaboichips.soap.common.entities;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.AreaEffectCloud;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
@@ -20,7 +18,6 @@ public class DragonsBreathEntity extends ThrownPotion {
     public DragonsBreathEntity(Level world, LivingEntity owner) {
         super(world, owner);
     }
-
 
     @Override
     protected void onHitBlock(BlockHitResult p_37541_) {

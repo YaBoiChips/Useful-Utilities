@@ -30,7 +30,7 @@ public class LargeFurnaceTE extends AbstractFurnaceBlockEntity {
     }
 
     public LargeFurnaceTE(BlockPos pos, BlockState state) {
-        this(SoapTileEntities.LARGE_FURNACE, pos, state, SoapRecipeTypes.LARGE_FURNACE);
+        this(SoapTileEntities.LARGE_FURNACE, pos, state, RecipeType.SMELTING);
     }
 
     @Override

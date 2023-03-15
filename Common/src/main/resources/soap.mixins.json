@@ -20,6 +20,7 @@
     "common.MixinZombie"
   ],
   "client": [
+    "access.AccessEntityRenderers"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -8,7 +8,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.HopperBlock;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -17,7 +20,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import yaboichips.soap.core.SoapTileEntities;
@@ -72,7 +74,7 @@ public class CopperHopper extends HopperBlock {
             BlockEntity $$5 = $$1.getBlockEntity($$2);
             if ($$5 instanceof CopperHopperTE) {
                 if ($$1 instanceof ServerLevel) {
-                    Containers.dropContents($$1, $$2, (CopperHopperTE)$$5);
+                    Containers.dropContents($$1, $$2, (CopperHopperTE) $$5);
                 }
 
                 $$1.updateNeighbourForOutputSignal($$2, this);

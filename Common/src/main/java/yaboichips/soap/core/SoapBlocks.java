@@ -2,6 +2,7 @@ package yaboichips.soap.core;
 
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import yaboichips.soap.common.blocks.hopper.CopperHopper;
 import yaboichips.soap.common.blocks.large_furnace.LargeFurnaceBlock;
 import yaboichips.soap.common.blocks.mason.MasonOven;
@@ -11,6 +12,23 @@ import yaboichips.soap.util.Register;
 
 
 public class SoapBlocks {
+
+    public static final Block PAPER_WALL = new Block(BlockBehaviour.Properties.of(Material.BAMBOO).sound(SoundType.BAMBOO).noOcclusion().strength(0.5f));
+    public static final Block ACACIA_PANEL = createPlankType();
+    public static final Block OAK_PANEL = createPlankType();
+    public static final Block DARK_OAK_PANEL = createPlankType();
+    public static final Block SPRUCE_PANEL = createPlankType();
+    public static final Block BIRCH_PANEL = createPlankType();
+    public static final Block JUNGLE_PANEL = createPlankType();
+    public static final Block MANGROVE_PANEL = createPlankType();
+    public static final Block WARPED_PANEL = createNetherPlankType();
+    public static final Block CRIMSON_PANEL = createNetherPlankType();
+
+    public static final Block CALCITE_PANEL = new Block(BlockBehaviour.Properties.copy(Blocks.CALCITE));
+    public static final Block PRISMARINE_PANEL = new Block(BlockBehaviour.Properties.copy(Blocks.PRISMARINE));
+    public static final Block PURPUR_PANEL = new Block(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK));
+    public static final Block STONE_PANEL = createStoneType();
+    public static final Block DEEPSLATE_PANEL = createDeepslateType();
 
     public static final Block COPPER_HOPPER = new CopperHopper(BlockBehaviour.Properties.copy(Blocks.HOPPER).noOcclusion());
     public static final Block MASON_OVEN = new MasonOven(BlockBehaviour.Properties.copy(Blocks.BLAST_FURNACE));
@@ -44,6 +62,34 @@ public class SoapBlocks {
     public static final Block CALCITE_BRICK_STAIRS = StairBlockAccess.create(CALCITE_BRICKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CALCITE));
     public static final Block CALCITE_BRICK_WALL = new WallBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE));
 
+    public static Block createPlankType() {
+        return new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS));
+    }
+
+    public static Block createSandType() {
+        return new SandBlock(0, BlockBehaviour.Properties.copy(Blocks.SAND));
+    }
+
+    public static Block createGravelType() {
+        return new GravelBlock(BlockBehaviour.Properties.copy(Blocks.GRAVEL));
+    }
+
+    public static Block createBrickType() {
+        return new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS));
+    }
+
+    public static Block createNetherPlankType() {
+        return new Block(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS));
+    }
+
+    public static Block createStoneType() {
+        return new Block(BlockBehaviour.Properties.copy(Blocks.STONE));
+    }
+
+    public static Block createDeepslateType() {
+        return new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
+    }
+
     public static void register(Register<Block> blocks) {
         blocks.register("copper_hopper", COPPER_HOPPER);
         blocks.register("amethyst_lantern", AMETHYST_LANTERN);
@@ -73,5 +119,20 @@ public class SoapBlocks {
         blocks.register("calcite_brick_slab", CALCITE_BRICK_SLAB);
         blocks.register("calcite_brick_stairs", CALCITE_BRICK_STAIRS);
         blocks.register("calcite_brick_wall", CALCITE_BRICK_WALL);
+        blocks.register("paper_wall", PAPER_WALL);
+        blocks.register("acacia_panel", ACACIA_PANEL);
+        blocks.register("oak_panel", OAK_PANEL);
+        blocks.register("dark_oak_panel", DARK_OAK_PANEL);
+        blocks.register("spruce_panel", SPRUCE_PANEL);
+        blocks.register("birch_panel", BIRCH_PANEL);
+        blocks.register("jungle_panel", JUNGLE_PANEL);
+        blocks.register("mangrove_panel", MANGROVE_PANEL);
+        blocks.register("warped_panel", WARPED_PANEL);
+        blocks.register("crimson_panel", CRIMSON_PANEL);
+        blocks.register("calcite_panel", CALCITE_PANEL);
+        blocks.register("prismarine_panel", PRISMARINE_PANEL);
+        blocks.register("purpur_panel", PURPUR_PANEL);
+        blocks.register("stone_panel", STONE_PANEL);
+        blocks.register("deepslate_panel", DEEPSLATE_PANEL);
     }
 }
