@@ -8,9 +8,9 @@ archivesBaseName = "${mod_name}-common-${minecraft_version}"
 minecraft {
     accessWideners(project.file("src/main/resources/soap.aw"))
     version(minecraft_version)
-    runs {   
+    runs {
         if (project.hasProperty('common_runs_enabled') ? project.findProperty('common_runs_enabled').toBoolean() : true) {
-        
+
             server(project.hasProperty('common_server_run_name') ? project.findProperty('common_server_run_name') : 'vanilla_server') {
                 workingDirectory(this.file("run"))
             }
@@ -23,14 +23,16 @@ minecraft {
 
 
 repositories {
-    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'}
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 }
 
 dependencies {
-    compileOnly group:'com.google.auto.service', name:'auto-service', version:'1.0.1'
-     implementation 'com.google.auto.service:auto-service-annotations:1.0.1'
-    compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.4'
-     compileOnly ("software.bernie.geckolib:geckolib-forge-1.19:3.1.27")
+    compileOnly group: 'com.google.auto.service', name: 'auto-service', version: '1.0.1'
+    implementation 'com.google.auto.service:auto-service-annotations:1.0.1'
+    compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.4'
+    compileOnly("software.bernie.geckolib:geckolib-forge-1.19:3.1.27")
+    compileOnly group: 'com.google.auto.service', name: 'auto-service', version: '1.0.1'
+    annotationProcessor group: 'com.google.auto.service', name: 'auto-service', version: '1.0.1'
 
 }
 

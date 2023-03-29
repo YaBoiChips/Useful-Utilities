@@ -94,7 +94,6 @@ repositories {
 }
 
 dependencies {
-    compileOnly group:'com.google.auto.service', name:'auto-service', version:'1.0.1'
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly project(":Common")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
