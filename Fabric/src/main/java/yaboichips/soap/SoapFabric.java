@@ -8,6 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import yaboichips.soap.common.entities.Gremlin;
 import yaboichips.soap.core.*;
+import yaboichips.soap.network.FabricNetworkHandler;
 
 import static yaboichips.soap.Soap.createLocation;
 
@@ -23,6 +24,8 @@ public class SoapFabric implements ModInitializer {
         SoapMenus.register((name, menus) -> Registry.register(Registry.MENU, createLocation(name), menus));
         SoapRecipeSerializers.register((name, recipeSerializer) -> Registry.register(Registry.RECIPE_SERIALIZER, createLocation(name), recipeSerializer));
         SoapTileEntities.register((name, te) -> Registry.register(Registry.BLOCK_ENTITY_TYPE, createLocation(name), te));
+        registerEntityAttributes();
+        FabricNetworkHandler.init();
         Soap.init();
 
     }

@@ -5,6 +5,8 @@ Accessible class net/minecraft/client/gui/screens/MenuScreens$ScreenConstructor
 Accessible class net/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier
 Accessible class net/minecraft/world/item/crafting/SimpleCookingSerializer$CookieBaker
 
+accessible field net/minecraft/world/level/block/Block defaultBlockState Lnet/minecraft/world/level/block/state/BlockState;
+accessible field net/minecraft/client/player/LocalPlayer minecraft Lnet/minecraft/client/Minecraft;
 accessible field net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity litTime I
 accessible field net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity items Lnet/minecraft/core/NonNullList;
 accessible field net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity quickCheck Lnet/minecraft/world/item/crafting/RecipeManager$CachedCheck;

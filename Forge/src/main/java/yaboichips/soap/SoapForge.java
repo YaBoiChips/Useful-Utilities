@@ -1,15 +1,20 @@
 package yaboichips.soap;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 import yaboichips.soap.client.renderers.SoapRenderers;
@@ -32,11 +37,16 @@ public class SoapForge {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         bootStrap(eventBus);
         eventBus.addListener(this::doClientThings);
+        eventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void doClientThings(final FMLClientSetupEvent event) {
         UVCutoutRenders.renderCutOuts(blockRenderTypeMap -> blockRenderTypeMap.forEach(ItemBlockRenderTypes::setRenderLayer));
+    }
+
+    private void setup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(ForgeNetworkHandler::init);
     }
 
     private void bootStrap(IEventBus eventBus) {

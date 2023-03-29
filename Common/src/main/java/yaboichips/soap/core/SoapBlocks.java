@@ -6,6 +6,7 @@ import net.minecraft.world.level.material.Material;
 import yaboichips.soap.common.blocks.hopper.CopperHopper;
 import yaboichips.soap.common.blocks.large_furnace.LargeFurnaceBlock;
 import yaboichips.soap.common.blocks.mason.MasonOven;
+import yaboichips.soap.common.blocks.mimic.MimicBlock;
 import yaboichips.soap.mixin.access.EndRodAccess;
 import yaboichips.soap.mixin.access.StairBlockAccess;
 import yaboichips.soap.util.Register;
@@ -33,6 +34,7 @@ public class SoapBlocks {
     public static final Block COPPER_HOPPER = new CopperHopper(BlockBehaviour.Properties.copy(Blocks.HOPPER).noOcclusion());
     public static final Block MASON_OVEN = new MasonOven(BlockBehaviour.Properties.copy(Blocks.BLAST_FURNACE));
     public static final Block LARGE_FURNACE = new LargeFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.BLAST_FURNACE));
+    public static final Block MIMIC = new MimicBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK));
 
     public static final Block COPPER_CHAIN = new ChainBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN));
     public static final Block AMETHYST_LANTERN = new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN).noOcclusion());
@@ -97,6 +99,7 @@ public class SoapBlocks {
         blocks.register("copper_chain", COPPER_CHAIN);
         blocks.register("mason_oven", MASON_OVEN);
         blocks.register("large_furnace", LARGE_FURNACE);
+        blocks.register("mimic", MIMIC);
         blocks.register("tuff_slab", TUFF_SLAB);
         blocks.register("tuff_stairs", TUFF_STAIRS);
         blocks.register("tuff_wall", TUFF_WALL);
