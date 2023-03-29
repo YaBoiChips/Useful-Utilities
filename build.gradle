@@ -1,11 +1,16 @@
 subprojects {
     
     apply plugin: 'java'
-    
+
     java.toolchain.languageVersion = JavaLanguageVersion.of(17)
     java.withSourcesJar()
     java.withJavadocJar()
-        
+
+    dependencies {
+        compileOnly group: 'com.google.auto.service', name: 'auto-service', version: '1.0.1'
+        annotationProcessor group: 'com.google.auto.service', name: 'auto-service', version: '1.0.1'
+    }
+
     jar {
         from(rootProject.file("LICENSE")) {
             rename { "${it}_${mod_name}" }
@@ -51,4 +56,6 @@ subprojects {
 
         enabled = false
     }
+
+
 }
