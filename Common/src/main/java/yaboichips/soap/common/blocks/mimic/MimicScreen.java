@@ -38,6 +38,8 @@ public class MimicScreen extends Screen {
             BUTTONS.add(new Button((this.width / 2) - 75, y, 150, 20, Component.translatable("subtitles." + soundEvent.getLocation().getPath()), (onPress) -> {
                 this.minecraft.player.playSound(soundEvent, 1, 1);
                 ModPlatform.INSTANCE.sendToServer(new MimicSoundPacket(this.mimic, soundEvent.getLocation().getNamespace(), soundEvent.getLocation().getPath()));
+                this.mimic.setSound(soundEvent.getLocation().getPath());
+                this.mimic.setNamespace(soundEvent.getLocation().getNamespace());
             }));
             this.y = this.y + 25;
         });

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "bottom": "soap:block/stained_door_bottom",
+    "top": "soap:block/stained_door_top"
+  }
+}

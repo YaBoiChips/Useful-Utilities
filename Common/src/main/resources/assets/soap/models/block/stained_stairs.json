@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "soap:block/stained",
+    "top": "soap:block/stained",
+    "side": "soap:block/stained"
+  }
+}

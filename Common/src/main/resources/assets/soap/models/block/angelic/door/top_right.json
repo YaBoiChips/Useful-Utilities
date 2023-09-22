@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "soap:block/angelic/door_bottom",
+    "top": "soap:block/angelic/door_top"
+  }
+}

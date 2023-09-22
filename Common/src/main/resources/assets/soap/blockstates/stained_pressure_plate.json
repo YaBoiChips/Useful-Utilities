@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "soap:block/stained_pressure_plate"
+    },
+    "powered=true": {
+      "model": "soap:block/stained_pressure_plate_down"
+    }
+  }
+}

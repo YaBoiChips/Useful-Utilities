@@ -19,12 +19,18 @@ import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 import yaboichips.soap.core.SoapRecipeTypes;
 import yaboichips.soap.core.SoapTileEntities;
 
 import javax.annotation.Nullable;
 
-public class LargeFurnaceTE extends AbstractFurnaceBlockEntity {
+public class LargeFurnaceTE extends AbstractFurnaceBlockEntity implements IAnimatable {
+
+    public AnimationFactory factory = new AnimationFactory(this);
+
     protected LargeFurnaceTE(BlockEntityType<?> $$0, BlockPos $$1, BlockState $$2, RecipeType<? extends AbstractCookingRecipe> $$3) {
         super($$0, $$1, $$2, $$3);
     }
@@ -151,5 +157,14 @@ public class LargeFurnaceTE extends AbstractFurnaceBlockEntity {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public void registerControllers(AnimationData data) {
+    }
+
+    @Override
+    public AnimationFactory getFactory() {
+        return factory;
     }
 }

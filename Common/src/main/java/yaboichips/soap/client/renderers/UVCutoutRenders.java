@@ -15,6 +15,8 @@ public class UVCutoutRenders {
         map.put(SoapBlocks.AMETHYST_LANTERN, RenderType.cutoutMipped());
         map.put(SoapBlocks.COPPER_CHAIN, RenderType.cutoutMipped());
         map.put(SoapBlocks.COPPER_HOPPER, RenderType.cutoutMipped());
+        map.put(SoapBlocks.STAINED_TRAPDOOR, RenderType.cutoutMipped());
+//        map.put(SoapBlocks.STAINED_DOOR, RenderType.cutoutMipped());
 
         mapConsumer.accept(map);
 

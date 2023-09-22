@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "soap:block/angelic/planks",
+    "east": "soap:block/angelic/crafting_table_side",
+    "north": "soap:block/angelic/crafting_table_front",
+    "particle": "soap:block/angelic/crafting_table_front",
+    "south": "soap:block/angelic/crafting_table_side",
+    "up": "soap:block/angelic/crafting_table_top",
+    "west": "soap:block/angelic/crafting_table_front"
+  }
+}

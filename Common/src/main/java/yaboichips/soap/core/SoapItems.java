@@ -1,5 +1,6 @@
 package yaboichips.soap.core;
 
+import net.minecraft.core.Registry;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -7,10 +8,14 @@ import net.minecraft.world.level.block.Block;
 import yaboichips.soap.common.items.*;
 import yaboichips.soap.util.Register;
 
+import java.util.HashMap;
+
 import static yaboichips.soap.core.SoapTab.TAB;
 
 
 public class SoapItems {
+
+    public static HashMap<String, Item> ITEMS = new HashMap<>();
 
     public static final Item PAPER_WALL = createBlockItem(SoapBlocks.PAPER_WALL);
     public static final Item ACACIA_PANEL = createBlockItem(SoapBlocks.ACACIA_PANEL);
@@ -28,18 +33,38 @@ public class SoapItems {
     public static final Item STONE_PANEL = createBlockItem(SoapBlocks.STONE_PANEL);
     public static final Item DEEPSLATE_PANEL = createBlockItem(SoapBlocks.DEEPSLATE_PANEL);
 
+    public static final Item STAINED_PLANKS = createBlockItem(SoapBlocks.STAINED_PLANKS);
+    public static final Item STAINED_SLAB = createBlockItem(SoapBlocks.STAINED_SLAB);
+    public static final Item STAINED_STAIRS = createBlockItem(SoapBlocks.STAINED_STAIRS);
+    //    public static final Item STAINED_DOOR = createBlockItem(SoapBlocks.STAINED_DOOR);
+    public static final Item STAINED_TRAPDOOR = createBlockItem(SoapBlocks.STAINED_TRAPDOOR);
+    public static final Item STAINED_PRESSURE_PLATE = createBlockItem(SoapBlocks.STAINED_PRESSURE_PLATE);
+    public static final Item STAINED_FENCE = createBlockItem(SoapBlocks.STAINED_FENCE);
+    public static final Item STAINED_FENCE_GATE = createBlockItem(SoapBlocks.STAINED_FENCE_GATE);
+
+    public static final Item ANGELIC_PLANKS = createBlockItem(SoapBlocks.ANGELIC_PLANKS);
+    public static final Item ANGELIC_SLAB = createBlockItem(SoapBlocks.ANGELIC_SLAB);
+    public static final Item ANGELIC_STAIRS = createBlockItem(SoapBlocks.ANGELIC_STAIRS);
+    public static final Item ANGELIC_DOOR = createBlockItem(SoapBlocks.ANGELIC_DOOR);
+    public static final Item ANGELIC_TRAPDOOR = createBlockItem(SoapBlocks.ANGELIC_TRAPDOOR);
+    public static final Item ANGELIC_PRESSURE_PLATE = createBlockItem(SoapBlocks.ANGELIC_PRESSURE_PLATE);
+    public static final Item ANGELIC_FENCE = createBlockItem(SoapBlocks.ANGELIC_FENCE);
+    public static final Item ANGELIC_FENCE_GATE = createBlockItem(SoapBlocks.ANGELIC_FENCE_GATE);
+    public static final Item ANGELIC_LOG = createBlockItem(SoapBlocks.ANGELIC_LOG);
+    public static final Item ANGELIC_WOOD = createBlockItem(SoapBlocks.ANGELIC_WOOD);
 
     public static final Item COPPER_HOPPER = createBlockItem(SoapBlocks.COPPER_HOPPER);
     public static final Item MASON_OVEN = createBlockItem(SoapBlocks.MASON_OVEN);
     public static final Item LARGE_FURNACE = createBlockItem(SoapBlocks.LARGE_FURNACE);
     public static final Item MIMIC = createBlockItem(SoapBlocks.MIMIC);
 
-    public static final Item PALADINS_GEM = new PaladinsGem(new Item.Properties().tab(TAB));
+    public static final Item PALADINS_GEM = createItem("paladins_gem", new PaladinsGem(new Item.Properties().tab(TAB)));
+    public static final Item GLASS_CUTTERS = createItem("glass_cutters",new GlassCutters(1, -2.8f, SoapTiers.GLASS, SoapTags.GLASS, new Item.Properties().tab(TAB)));
 
-    public static final Item FIRE_SWORD = new FireSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB));
-    public static final Item WATER_SWORD = new WaterSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB));
-    public static final Item AIR_SWORD = new AirSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB));
-    public static final Item LIGHTNING_SWORD = new LightningSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB));
+    public static final Item FIRE_SWORD = createItem("fire_sword", new FireSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB)));
+    public static final Item WATER_SWORD = createItem("water_sword", new WaterSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB)));
+    public static final Item AIR_SWORD = createItem("air_sword", new AirSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB)));
+    public static final Item LIGHTNING_SWORD = createItem("lightning_sword", new LightningSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB)));
 
 
     public static final Item TUFF_SLAB = createBlockItem(SoapBlocks.TUFF_SLAB);
@@ -69,106 +94,49 @@ public class SoapItems {
     public static final Item CALCITE_BRICK_WALL = createBlockItem(SoapBlocks.CALCITE_BRICK_WALL);
 
 
-    public static final Item COPPER_BOOTS = createArmorItem(SoapArmors.COPPER, EquipmentSlot.FEET);
-    public static final Item COPPER_LEGGINGS = createArmorItem(SoapArmors.COPPER, EquipmentSlot.LEGS);
-    public static final Item COPPER_CHESTPLATE = createArmorItem(SoapArmors.COPPER, EquipmentSlot.CHEST);
-    public static final Item COPPER_HELMET = createArmorItem(SoapArmors.COPPER, EquipmentSlot.HEAD);
+    public static final Item COPPER_BOOTS = createArmorItem("copper_boots", SoapArmors.COPPER, EquipmentSlot.FEET);
+    public static final Item COPPER_LEGGINGS = createArmorItem("copper_leggings", SoapArmors.COPPER, EquipmentSlot.LEGS);
+    public static final Item COPPER_CHESTPLATE = createArmorItem("copper_chestplate", SoapArmors.COPPER, EquipmentSlot.CHEST);
+    public static final Item COPPER_HELMET = createArmorItem("copper_helmet", SoapArmors.COPPER, EquipmentSlot.HEAD);
 
-    public static final Item RAW_LLAMA = createFoodItem(SoapFoods.RAW_LLAMA);
-    public static final Item CHARKI = createFoodItem(SoapFoods.CHARKI);
-    public static final Item RAW_GOAT = createFoodItem(SoapFoods.RAW_GOAT);
-    public static final Item COOKED_GOAT = createFoodItem(SoapFoods.COOKED_GOAT);
+    public static final Item RAW_LLAMA = createFoodItem("raw_llama", SoapFoods.RAW_LLAMA);
+    public static final Item CHARKI = createFoodItem("charki", SoapFoods.CHARKI);
+    public static final Item RAW_GOAT = createFoodItem("raw_goat", SoapFoods.RAW_GOAT);
+    public static final Item COOKED_GOAT = createFoodItem("cooked_goat", SoapFoods.COOKED_GOAT);
 
-    public static final Item HORSE_BONE = new Item(new Item.Properties().tab(TAB).craftRemainder(Items.BONE));
-    public static final Item FOX_FUR = createItem();
-    public static final Item LLAMA_SPIT = createItem();
-    public static final Item THROWABLE_DRAGONS_BREATH = new ThrowableDragonsBreath(new Item.Properties().tab(TAB));
+    public static final Item HORSE_BONE = createItem("horse_bone", new Item(new Item.Properties().tab(TAB).craftRemainder(Items.BONE)));
+    public static final Item FOX_FUR = createItem("fox_fur");
+    public static final Item LLAMA_SPIT = createItem("llama_spit");
+    public static final Item SUNFLOWER_OIL = createItem("sunflower_oil");
+    public static final Item THROWABLE_DRAGONS_BREATH = createItem("throwable_dragons_breath", new ThrowableDragonsBreath(new Item.Properties().tab(TAB)));
 
     public static final Item AMETHYST_LANTERN = createBlockItem(SoapBlocks.AMETHYST_LANTERN);
     public static final Item AMETHYST_END_ROD = createBlockItem(SoapBlocks.AMETHYST_END_ROD);
     public static final Item COPPER_CHAIN = createBlockItem(SoapBlocks.COPPER_CHAIN);
-    public static final Item TRAVELERS_BOOTS = new TravelersBoots(SoapArmors.TRAVELERS, EquipmentSlot.FEET, new Item.Properties().tab(TAB));
+    public static final Item TRAVELERS_BOOTS = createItem("travelers_boots", new TravelersBoots(SoapArmors.TRAVELERS, EquipmentSlot.FEET, new Item.Properties().tab(TAB)));
 
-    public static BlockItem createBlockItem(Block block) {
-        return new BlockItem(block, new Item.Properties().tab(TAB));
+    public static Item createBlockItem(Block block) {
+        return createItem(Registry.BLOCK.getKey(block).getNamespace(), new BlockItem(block, new Item.Properties().tab(TAB)));
+    }
+    public static Item createItem(String id, Item item){
+        ITEMS.put(id, item);
+        return item;
     }
 
     public static void register(Register<Item> item) {
-        item.register("copper_hopper", COPPER_HOPPER);
-        item.register("amethyst_lantern", AMETHYST_LANTERN);
-        item.register("amethyst_end_rod", AMETHYST_END_ROD);
-        item.register("copper_chain", COPPER_CHAIN);
-        item.register("mason_oven", MASON_OVEN);
-        item.register("large_furnace", LARGE_FURNACE);
-        item.register("mimic", MIMIC);
-        item.register("tuff_slab", TUFF_SLAB);
-        item.register("tuff_stairs", TUFF_STAIRS);
-        item.register("tuff_wall", TUFF_WALL);
-        item.register("polished_tuff", POLISHED_TUFF);
-        item.register("polished_tuff_slab", POLISHED_TUFF_SLAB);
-        item.register("polished_tuff_stairs", POLISHED_TUFF_STAIRS);
-        item.register("polished_tuff_wall", POLISHED_TUFF_WALL);
-        item.register("tuff_bricks", TUFF_BRICKS);
-        item.register("tuff_brick_slab", TUFF_BRICK_SLAB);
-        item.register("tuff_brick_stairs", TUFF_BRICK_STAIRS);
-        item.register("tuff_brick_wall", TUFF_BRICK_WALL);
-        item.register("calcite_slab", CALCITE_SLAB);
-        item.register("calcite_stairs", CALCITE_STAIRS);
-        item.register("calcite_wall", CALCITE_WALL);
-        item.register("polished_calcite", POLISHED_CALCITE);
-        item.register("polished_calcite_slab", POLISHED_CALCITE_SLAB);
-        item.register("polished_calcite_stairs", POLISHED_CALCITE_STAIRS);
-        item.register("polished_calcite_wall", POLISHED_CALCITE_WALL);
-        item.register("calcite_bricks", CALCITE_BRICKS);
-        item.register("calcite_brick_slab", CALCITE_BRICK_SLAB);
-        item.register("calcite_brick_stairs", CALCITE_BRICK_STAIRS);
-        item.register("calcite_brick_wall", CALCITE_BRICK_WALL);
-        item.register("copper_boots", COPPER_BOOTS);
-        item.register("copper_leggings", COPPER_LEGGINGS);
-        item.register("copper_chestplate", COPPER_CHESTPLATE);
-        item.register("copper_helmet", COPPER_HELMET);
-        item.register("raw_llama", RAW_LLAMA);
-        item.register("charki", CHARKI);
-        item.register("raw_goat", RAW_GOAT);
-        item.register("cooked_goat", COOKED_GOAT);
-        item.register("horse_bone", HORSE_BONE);
-        item.register("fox_fur", FOX_FUR);
-        item.register("llama_spit", LLAMA_SPIT);
-        item.register("throwable_dragons_breath", THROWABLE_DRAGONS_BREATH);
-        item.register("travelers_boots", TRAVELERS_BOOTS);
-        item.register("paper_wall", PAPER_WALL);
-        item.register("acacia_panel", ACACIA_PANEL);
-        item.register("oak_panel", OAK_PANEL);
-        item.register("dark_oak_panel", DARK_OAK_PANEL);
-        item.register("spruce_panel", SPRUCE_PANEL);
-        item.register("birch_panel", BIRCH_PANEL);
-        item.register("jungle_panel", JUNGLE_PANEL);
-        item.register("mangrove_panel", MANGROVE_PANEL);
-        item.register("warped_panel", WARPED_PANEL);
-        item.register("crimson_panel", CRIMSON_PANEL);
-        item.register("calcite_panel", CALCITE_PANEL);
-        item.register("prismarine_panel", PRISMARINE_PANEL);
-        item.register("purpur_panel", PURPUR_PANEL);
-        item.register("stone_panel", STONE_PANEL);
-        item.register("deepslate_panel", DEEPSLATE_PANEL);
-        item.register("paladins_gem", PALADINS_GEM);
-        item.register("fire_sword", FIRE_SWORD);
-        item.register("air_sword", AIR_SWORD);
-        item.register("water_sword", WATER_SWORD);
-        item.register("lightning_sword", LIGHTNING_SWORD);
-
+        ITEMS.forEach(item::register);
     }
 
-    public static Item createItem() {
-        return new Item(new Item.Properties().tab(TAB));
+    public static Item createItem(String id) {
+        return createItem(id, new Item(new Item.Properties().tab(TAB)));
     }
 
 
-    public static Item createArmorItem(ArmorMaterial material, EquipmentSlot slot) {
-        return new ArmorItem(material, slot, new Item.Properties().tab(TAB));
+    public static Item createArmorItem(String id, ArmorMaterial material, EquipmentSlot slot) {
+        return createItem(id, new ArmorItem(material, slot, new Item.Properties().tab(TAB)));
     }
 
-    public static Item createFoodItem(FoodProperties food) {
-        return new Item(new Item.Properties().tab(TAB).food(food));
+    public static Item createFoodItem(String id, FoodProperties food) {
+        return createItem(id, new Item(new Item.Properties().tab(TAB).food(food)));
     }
 }

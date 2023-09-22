@@ -1,10 +1,8 @@
 package yaboichips.soap;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -13,13 +11,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
+import yaboichips.soap.client.LargeFurnaceTERendererForge;
 import yaboichips.soap.client.renderers.SoapRenderers;
 import yaboichips.soap.client.renderers.UVCutoutRenders;
-import yaboichips.soap.common.entities.DragonsBreathEntity;
 import yaboichips.soap.common.entities.Gremlin;
 import yaboichips.soap.core.*;
 
@@ -46,7 +42,7 @@ public class SoapForge {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(ForgeNetworkHandler::init);
+        ForgeNetworkHandler.init();
     }
 
     private void bootStrap(IEventBus eventBus) {
@@ -61,8 +57,9 @@ public class SoapForge {
         eventBus.addListener(this::registerEntityRenderers);
     }
 
-    public void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event){
+    public void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         SoapRenderers.register(event::registerEntityRenderer);
+        event.registerBlockEntityRenderer(SoapTileEntities.LARGE_FURNACE, LargeFurnaceTERendererForge::new);
     }
 
     public void createEntityAttributes(final EntityAttributeCreationEvent event) {
@@ -92,6 +89,7 @@ public class SoapForge {
             registry.register(name, block);
         }));
     }
+
     public void registerRecipeType(RegisterEvent event) {
         SoapRecipeTypes.register((name, recipe) -> event.register(ForgeRegistries.Keys.RECIPE_TYPES, registry -> {
             registry.register(name, recipe);

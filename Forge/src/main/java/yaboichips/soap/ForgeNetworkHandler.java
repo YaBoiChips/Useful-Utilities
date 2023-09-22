@@ -1,6 +1,7 @@
 package yaboichips.soap;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.protocol.Packet;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
@@ -50,19 +51,23 @@ public class ForgeNetworkHandler {
         SIMPLE_CHANNEL.sendToServer(objectToSend);
     }
 
-    public static <T extends SoapServer2ClientPacket> void handle(T packet, Supplier<NetworkEvent.Context> ctx, BiConsumer<T, Level> handle) {
+    public static <T extends SoapServer2ClientPacket> void handle(T packet, Supplier<NetworkEvent.Context> ctx, SoapServer2ClientPacket.Handle<T> handle) {
         NetworkEvent.Context context = ctx.get();
         if (context.getDirection().getReceptionSide().isClient()) {
             context.enqueueWork(() -> {
                 Client.clientHandle(packet, handle);
             });
-            context.setPacketHandled(true);
+        } else {
+            ServerPlayer sender = context.getSender();
+            assert sender != null;
+            handle.handle(packet, sender.level);
         }
+        context.setPacketHandled(true);
     }
 
     private static class Client {
-        private static <T extends SoapServer2ClientPacket> void clientHandle(T packet, BiConsumer<T, Level> handle) {
-            handle.accept(packet, Minecraft.getInstance().level);
+        private static <T extends SoapServer2ClientPacket> void clientHandle(T packet, SoapServer2ClientPacket.Handle<T> handle) {
+            handle.handle(packet, Minecraft.getInstance().level);
         }
     }
 }

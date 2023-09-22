@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "particle": "soap:block/angelic/planks",
+    "texture": "soap:block/angelic/planks"
+  }
+}

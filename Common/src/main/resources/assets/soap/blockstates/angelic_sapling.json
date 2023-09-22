@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "soap:block/angelic/grower_item"
+    }
+  }
+}

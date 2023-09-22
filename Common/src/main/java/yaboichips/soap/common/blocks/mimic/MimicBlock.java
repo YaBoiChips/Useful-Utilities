@@ -47,11 +47,13 @@ public class MimicBlock extends BaseEntityBlock {
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos pos1, boolean b) {
         if (level.getBlockEntity(pos) instanceof MimicTE tile) {
             if (!level.isClientSide) {
-                ResourceLocation soundLocation = new ResourceLocation(tile.getNamespace(), tile.getSound());
-                if (level.hasNeighborSignal(pos)) {
-                    SoundEvent soundEvent = Registry.SOUND_EVENT.get(soundLocation);
-                    if (soundEvent != null) {
-                        level.playSound(null, pos, soundEvent, SoundSource.BLOCKS, 1, 1);
+                if (tile.getNamespace() != null && tile.getSound() != null) {
+                    ResourceLocation soundLocation = new ResourceLocation(tile.getNamespace(), tile.getSound());
+                    if (level.hasNeighborSignal(pos)) {
+                        SoundEvent soundEvent = Registry.SOUND_EVENT.get(soundLocation);
+                        if (soundEvent != null) {
+                            level.playSound(null, pos, soundEvent, SoundSource.BLOCKS, 1, 1);
+                        }
                     }
                 }
             }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "soap:block/angelic/slab"
+    },
+    "type=double": {
+      "model": "soap:block/angelic/planks"
+    },
+    "type=top": {
+      "model": "soap:block/angelic/slab_top"
+    }
+  }
+}

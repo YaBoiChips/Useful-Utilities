@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "soap:block/stripped_angelic_log",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "soap:block/stripped_angelic_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "soap:block/stripped_angelic_log"
+    }
+  }
+}

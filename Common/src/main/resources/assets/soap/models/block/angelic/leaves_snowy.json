@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "soap:block/angelic/leaves_snowy",
+    "east": "soap:block/angelic/leaves_snowy_side",
+    "north": "soap:block/angelic/leaves_snowy_side",
+    "particle": "soap:block/angelic/leaves_snowy_side",
+    "south": "soap:block/angelic/leaves_snowy_side",
+    "up": "soap:block/angelic/leaves_snowy",
+    "west": "soap:block/angelic/leaves_snowy_side"
+  }
+}

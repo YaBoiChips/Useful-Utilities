@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "soap:block/angelic/planks",
+    "east": "soap:block/angelic/bookshelf",
+    "north": "soap:block/angelic/bookshelf",
+    "particle": "soap:block/angelic/planks",
+    "south": "soap:block/angelic/bookshelf",
+    "up": "soap:block/angelic/planks",
+    "west": "soap:block/angelic/bookshelf"
+  }
+}

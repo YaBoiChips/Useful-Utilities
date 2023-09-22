@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "soap:block/angelic/stripped_log_top",
+    "side": "soap:block/angelic/stripped_log"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "soap:block/stained_slab"
+    },
+    "type=double": {
+      "model": "soap:block/stained"
+    },
+    "type=top": {
+      "model": "soap:block/stained_slab_top"
+    }
+  }
+}

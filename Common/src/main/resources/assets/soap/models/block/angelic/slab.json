@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "soap:block/angelic/planks",
+    "side": "soap:block/angelic/planks",
+    "top": "soap:block/angelic/planks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "soap:item/angelic/boat",
+    "layer1": "soap:item/chest_boat_overlay"
+  }
+}

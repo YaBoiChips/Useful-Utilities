@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "soap:block/angelic/leaves",
+    "particle": "soap:block/angelic/leaves"
+  }
+}
