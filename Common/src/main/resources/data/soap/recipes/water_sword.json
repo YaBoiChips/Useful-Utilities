@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "PNW",
+        " K "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:potion"
+        },
+        "P": {
+            "item": "minecraft:prismarine"
+        },
+        "N": {
+            "item": "minecraft:netherite_sword"
+        },
+        "W": {
+            "item": "minecraft:water_bucket"
+        },
+        "K": {
+            "item": "minecraft:kelp"
+        }
+    },
+    "result": {
+        "item": "soap:water_sword",
+        "count": 1
+    }
+}

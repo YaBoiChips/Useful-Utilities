@@ -59,7 +59,7 @@ public class SoapItems {
     public static final Item MIMIC = createBlockItem(SoapBlocks.MIMIC);
 
     public static final Item PALADINS_GEM = createItem("paladins_gem", new PaladinsGem(new Item.Properties().tab(TAB)));
-    public static final Item GLASS_CUTTERS = createItem("glass_cutters",new GlassCutters(1, -2.8f, SoapTiers.GLASS, SoapTags.GLASS, new Item.Properties().tab(TAB)));
+    public static final Item GLASS_CUTTERS = createItem("glass_cutters", new GlassCutters(1, -2.8f, SoapTiers.GLASS, SoapTags.GLASS, new Item.Properties().tab(TAB)));
 
     public static final Item FIRE_SWORD = createItem("fire_sword", new FireSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB)));
     public static final Item WATER_SWORD = createItem("water_sword", new WaterSword(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().tab(TAB)));
@@ -116,9 +116,11 @@ public class SoapItems {
     public static final Item TRAVELERS_BOOTS = createItem("travelers_boots", new TravelersBoots(SoapArmors.TRAVELERS, EquipmentSlot.FEET, new Item.Properties().tab(TAB)));
 
     public static Item createBlockItem(Block block) {
-        return createItem(Registry.BLOCK.getKey(block).getNamespace(), new BlockItem(block, new Item.Properties().tab(TAB)));
+        return createItem(Registry.BLOCK.getKey(block).getPath(), new BlockItem(block, new Item.Properties().tab(TAB)));
+
     }
-    public static Item createItem(String id, Item item){
+
+    public static Item createItem(String id, Item item) {
         ITEMS.put(id, item);
         return item;
     }

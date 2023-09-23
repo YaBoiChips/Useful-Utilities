@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "LNF",
+        " C "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:flint_and_steel"
+        },
+        "L": {
+            "item": "minecraft:lava_bucket"
+        },
+        "N": {
+            "item": "minecraft:netherite_sword"
+        },
+        "F": {
+            "item": "minecraft:fire_charge"
+        },
+        "C": {
+            "item": "minecraft:campfire"
+        }
+    },
+    "result": {
+        "item": "soap:fire_sword",
+        "count": 1
+    }
+}

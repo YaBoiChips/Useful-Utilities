@@ -83,7 +83,7 @@ public class SoapBlocks {
     public static final Block CALCITE_SLAB = createBlock("calcite_slab", new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
     public static final Block CALCITE_STAIRS = createBlock("calcite_stairs", StairBlockAccess.create(Blocks.CALCITE.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CALCITE)));
     public static final Block CALCITE_WALL = createBlock("calcite_wall", new WallBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
-    public static final Block POLISHED_CALCITE = createBlock("calcite_", new Block(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final Block POLISHED_CALCITE = createBlock("polished_calcite", new Block(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
     public static final Block POLISHED_CALCITE_SLAB = createBlock("polished_calcite_slab", new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
     public static final Block POLISHED_CALCITE_STAIRS = createBlock("polished_calcite_stairs", StairBlockAccess.create(POLISHED_CALCITE.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CALCITE)));
     public static final Block POLISHED_CALCITE_WALL = createBlock("polished_calcite_wall", new WallBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));

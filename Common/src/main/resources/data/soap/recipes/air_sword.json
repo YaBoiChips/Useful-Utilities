@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "SNG",
+        " F "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:sponge"
+        },
+        "S": {
+            "item": "minecraft:shulker_shell"
+        },
+        "N": {
+            "item": "minecraft:netherite_sword"
+        },
+        "G": {
+            "item": "minecraft:glass_bottle"
+        },
+        "F": {
+            "item": "minecraft:feather"
+        }
+    },
+    "result": {
+        "item": "soap:air_sword",
+        "count": 1
+    }
+}

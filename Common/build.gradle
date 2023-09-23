@@ -3,11 +3,11 @@ plugins {
     id('org.spongepowered.gradle.vanilla') version '0.2.1-SNAPSHOT'
 }
 
-archivesBaseName = "${mod_name}-common-${minecraft_version}"
+archivesBaseName = "${mod_name}-common-${mc_version}"
 
 minecraft {
     accessWideners(project.file("src/main/resources/soap.aw"))
-    version(minecraft_version)
+    version(mc_version)
     runs {
         if (project.hasProperty('common_runs_enabled') ? project.findProperty('common_runs_enabled').toBoolean() : true) {
 

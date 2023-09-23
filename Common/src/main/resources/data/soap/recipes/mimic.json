@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#N#",
+        "#J#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:copper_block"
+        },
+        "N": {
+            "item": "minecraft:note_block"
+        },
+        "J": {
+            "item": "minecraft:jukebox"
+        }
+    },
+    "result": {
+        "item": "soap:mimic",
+        "count": 1
+    }
+}

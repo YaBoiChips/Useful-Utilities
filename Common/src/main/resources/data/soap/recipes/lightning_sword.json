@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "RNC",
+        " D "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:lightning_rod"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "N": {
+            "item": "minecraft:netherite_sword"
+        },
+        "C": {
+            "item": "minecraft:copper_block"
+        },
+        "D": {
+            "item": "minecraft:redstone_torch"
+        }
+    },
+    "result": {
+        "item": "soap:lightning_sword",
+        "count": 1
+    }
+}

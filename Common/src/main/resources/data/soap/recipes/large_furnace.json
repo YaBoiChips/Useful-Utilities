@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:furnace"
+        }
+    },
+    "result": {
+        "item": "soap:large_furnace",
+        "count": 1
+    }
+}
