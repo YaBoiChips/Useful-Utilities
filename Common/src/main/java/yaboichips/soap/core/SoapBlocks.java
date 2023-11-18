@@ -1,10 +1,10 @@
 package yaboichips.soap.core;
 
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
+import yaboichips.soap.common.blocks.calibratedhopper.ItemCalibratorBlock;
 import yaboichips.soap.common.blocks.hopper.CopperHopper;
 import yaboichips.soap.common.blocks.large_furnace.LargeFurnaceBlock;
 import yaboichips.soap.common.blocks.mason.MasonOven;
@@ -12,9 +12,7 @@ import yaboichips.soap.common.blocks.mimic.MimicBlock;
 import yaboichips.soap.mixin.access.*;
 import yaboichips.soap.util.Register;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 
 public class SoapBlocks {
@@ -60,6 +58,8 @@ public class SoapBlocks {
     public static final Block DEEPSLATE_PANEL = createBlock("deepslate_panel",createDeepslateType());
 
     public static final Block COPPER_HOPPER = createBlock("copper_hopper", new CopperHopper(BlockBehaviour.Properties.copy(Blocks.HOPPER).noOcclusion()));
+    public static final Block ITEM_CALIBRATOR = createBlock("item_calibrator", new ItemCalibratorBlock(BlockBehaviour.Properties.copy(Blocks.HOPPER).noOcclusion()));
+
     public static final Block MASON_OVEN = createBlock("mason_oven", new MasonOven(BlockBehaviour.Properties.copy(Blocks.BLAST_FURNACE)));
     public static final Block LARGE_FURNACE = createBlock("large_furnace", new LargeFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.BLAST_FURNACE).noOcclusion()));
     public static final Block MIMIC = createBlock("mimic", new MimicBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)));

@@ -54,6 +54,7 @@ public class SoapItems {
     public static final Item ANGELIC_WOOD = createBlockItem(SoapBlocks.ANGELIC_WOOD);
 
     public static final Item COPPER_HOPPER = createBlockItem(SoapBlocks.COPPER_HOPPER);
+    public static final Item ITEM_CALIBRATOR = createBlockItem(SoapBlocks.ITEM_CALIBRATOR);
     public static final Item MASON_OVEN = createBlockItem(SoapBlocks.MASON_OVEN);
     public static final Item LARGE_FURNACE = createBlockItem(SoapBlocks.LARGE_FURNACE);
     public static final Item MIMIC = createBlockItem(SoapBlocks.MIMIC);

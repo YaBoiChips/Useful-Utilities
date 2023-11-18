@@ -10,6 +10,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import yaboichips.soap.common.blocks.calibratedhopper.ItemCalibratorScreen;
 import yaboichips.soap.common.blocks.large_furnace.LargeFurnaceScreen;
 import yaboichips.soap.common.blocks.mason.MasonScreen;
 import yaboichips.soap.core.SoapMenus;
@@ -26,5 +27,6 @@ public abstract class MixinScreenManager {
     private static void registerScreen(CallbackInfo ci) {
         register(SoapMenus.MASON_MENU, MasonScreen::new);
         register(SoapMenus.LARGE_FURNACE_MENU, LargeFurnaceScreen::new);
+        register(SoapMenus.CALIBRATED_HOPPER_MENU, ItemCalibratorScreen::new);
     }
 }
